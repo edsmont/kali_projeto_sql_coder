@@ -1,0 +1,30 @@
+CREATE USER 'admin_db'@'%' IDENTIFIED BY 'lab';
+GRANT ALL PRIVILEGES ON kali.* TO 'admin_db'@'%';
+FLUSH PRIVILEGES;
+
+CREATE USER 'backup_user'@'%' IDENTIFIED BY 'lab';
+GRANT SELECT, LOCK TABLES, SHOW VIEW, EVENT ON kali.* TO 'backup_user'@'%';
+FLUSH PRIVILEGES;
+
+CREATE USER 'backup_user'@'%' IDENTIFIED BY 'lab';
+GRANT SELECT, LOCK TABLES, SHOW VIEW, EVENT ON kali.* TO 'backup_user'@'%';
+FLUSH PRIVILEGES;
+
+CREATE USER 'app_user'@'%' IDENTIFIED BY 'lab';
+GRANT SELECT, INSERT, UPDATE, DELETE ON kali.* TO 'app_user'@'%';
+FLUSH PRIVILEGES;
+
+CREATE USER 'app_user'@'%' IDENTIFIED BY 'lab';
+GRANT SELECT, INSERT, UPDATE, DELETE ON kali.* TO 'app_user'@'%';
+FLUSH PRIVILEGES;
+
+CREATE USER 'analyst_user'@'%' IDENTIFIED BY 'lab';
+GRANT SELECT, EXECUTE ON kali.* TO 'analyst_user'@'%';
+FLUSH PRIVILEGES;
+
+CREATE USER 'read_only'@'%' IDENTIFIED BY 'lab';
+GRANT SELECT ON kali.* TO 'read_only'@'%';
+FLUSH PRIVILEGES;
+
+
+
